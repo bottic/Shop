@@ -17,5 +17,6 @@ class Settings(BaseSettings):
         # mysql+pymysql://user:password@host:port/dbname -- это DSN
         return f"mysql+pymysql://{self.DB_USER}:{self.DB_PASS}@{self.DB_HOST}:{self.DB_PORT}/{self.DB_NAME}"
 
-    model_config = SettingsConfigDict(env_file="../.env")  # если .env на уровень выше
+    model_config = SettingsConfigDict(env_file=".env")  # если .env на уровень выше
+
 settings = Settings()
