@@ -1,5 +1,6 @@
-.env
+src/.env
 .venv/
 .idea
 src/migrations/versions
 alembic.ini
+*.png

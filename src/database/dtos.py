@@ -1,8 +1,8 @@
 from typing import Optional
 
-from pydantic import BaseModel, Field, ConfigDict
+from pydantic import BaseModel, ConfigDict
 from datetime import datetime
-from src.enums import UserRole, OrderStatus, PaymentStatus, PaymentMethod
+from src.database.enums import UserRole, OrderStatus, PaymentStatus, PaymentMethod
 
 class UserPostDTO(BaseModel):
     email: str
@@ -37,6 +37,7 @@ class ProductPostDTO(BaseModel):
     description: str
     price: float
     sku: str
+    categories: list[int] = []
 
 class ProductGetDTO(ProductPostDTO):
     id: int

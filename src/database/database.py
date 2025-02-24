@@ -3,7 +3,7 @@ import asyncio
 from sqlalchemy import create_engine, URL, text
 from sqlalchemy.orm import Session, sessionmaker, DeclarativeBase
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker, AsyncSession
-from config import settings
+from src.config import settings
 
 
 engine = create_engine(
@@ -14,7 +14,7 @@ engine = create_engine(
 )
 async_engine = create_async_engine(
     url=settings.DATABASE_URL_asyncmy,
-    echo=True,
+    echo=False,
     pool_size=10,
     max_overflow=10,
 )

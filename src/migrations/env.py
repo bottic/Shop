@@ -7,7 +7,7 @@ from alembic import context
 
 from src.config import settings
 
-from src.models import UserTable # noqa
+from src.database.models import UserTable # noqa
 from src.database import Base
 
 config = context.config

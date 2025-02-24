@@ -1,9 +1,9 @@
-from src.database import Base
+from src.database.database import Base
 from sqlalchemy.orm import Mapped, mapped_column, relationship
 from sqlalchemy import Table, Column, Integer, String, ForeignKey, text, Float
 
 from datetime import datetime
-from src.enums import UserRole, OrderStatus, PaymentStatus, PaymentMethod
+from src.database.enums import UserRole, OrderStatus, PaymentStatus, PaymentMethod
 from typing import Annotated
 
 idpk = Annotated[int, mapped_column(primary_key=True, autoincrement=True)]
